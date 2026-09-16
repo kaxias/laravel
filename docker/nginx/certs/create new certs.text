@@ -1,0 +1,6 @@
+openssl req -x509 -nodes -newkey rsa:3072 \
+  -keyout docker/nginx/certs/laravel.key \
+  -out docker/nginx/certs/laravel.crt \
+  -days 825 \
+  -subj "/C=US/ST=Local/L=Local/O=Local Dev/OU=Local Dev/CN=laravel.test" \
+  -addext "subjectAltName=DNS:laravel.test,IP:127.0.0.1"
