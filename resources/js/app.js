@@ -1,7 +1,3 @@
-import Alpine, { registerAlpineComponents } from './alpine';
+import Livewire from './alpine';
 
-window.Alpine = Alpine;
-
-registerAlpineComponents();
-
- Alpine.start();
+Livewire.start();

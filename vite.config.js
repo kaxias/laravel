@@ -55,5 +55,11 @@ export default defineConfig(({ mode }) => {
                 ignored: ['**/docker/**', '**/app/**', '**/routes/**', '**/bootstrap/**', '**/database/**', '**/config/**'],
             },
         },
+        resolve: {
+            alias: {
+                // Map the @livewire alias directly to the ESM bundle in the vendor folder
+                '@livewire': path.resolve(import.meta.dirname, 'vendor/livewire/livewire/dist/livewire.esm.js'),
+            },
+        },
     };
 });

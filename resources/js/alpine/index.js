@@ -1,8 +1,9 @@
-import Alpine from 'alpinejs';
+import { Livewire, Alpine } from '@livewire';
+import focus from '@alpinejs/focus';
 import examplo from './examplo.js';
 
-export function registerAlpineComponents() {
-    Alpine.data('examplo', examplo);
-}
+Alpine.plugin(focus);
 
-export default Alpine;
+Alpine.data('examplo', examplo);
+
+export default Livewire;
